@@ -4,6 +4,7 @@
 %token NL
 %token EOF
 %start <(string * (bool * string) list) list> quiz
+%start <unit> title
 %{
 exception Non_consecutive_answer
 exception Invalid_answer
@@ -31,3 +32,4 @@ question: q=TEXT NL l=nonempty_list(choice) a=ANSWER NL {
     raise Invalid_answer
 }
 quiz: l=separated_list(NL, question) EOF { l }
+title: TEXT EOF { () }
