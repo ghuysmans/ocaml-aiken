@@ -1,0 +1,14 @@
+opam-version: "2.0"
+name: "aiken"
+version: "dev"
+maintainer: "Guillaume Huysmans <ghuysmans99@gmail.com>"
+authors: "Guillaume Huysmans <ghuysmans99@gmail.com>"
+homepage: "https://github.com/ghuysmans/ocaml-aiken/"
+bug-reports: "https://github.com/ghuysmans/ocaml-aiken/issues"
+dev-repo: "git+https://github.com/ghuysmans/ocaml-aiken/"
+build: [["dune" "build" "-p" name "-j" jobs]]
+depends: [
+  "dune"
+	"menhir"
+]
+synopsis: "The Aiken format is a very simple way of creating multiple choice questions format using a clear human-readable format in a text file."
