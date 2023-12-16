@@ -11,7 +11,8 @@ let question q =
   with Parser.Error ->
     raise Invalid_question
 
-let pp_question ppf (q, l) =
+let pp_question ppf (q, (l : Answers.t)) =
+  let l = (l :> (bool * string) list) in
   try
     fprintf ppf "@[<v>%s" (question q);
     List.iteri (fun i (_, c) -> fprintf ppf "@;%c. %s" (letter i) c) l;

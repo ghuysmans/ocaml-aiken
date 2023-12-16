@@ -3,7 +3,7 @@
 %token <char> ANSWER
 %token NL
 %token EOF
-%start <(string * (bool * string) list) list> quiz
+%start <(string * Answers.t) list> quiz
 %start <unit> title
 %%
 choice: c=CHOICE NL { c }
