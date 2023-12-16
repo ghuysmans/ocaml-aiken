@@ -31,7 +31,7 @@ ANSWER: A
 
 let () =
   expect_failure Printer.Invalid_question (validate ["", []]);
-  expect_failure Printer.Invalid_question (validate ["a. z", []]);
+  expect_failure Printer.Invalid_question (validate ["A. z", []]);
   expect_failure Answers.Invalid (validate ["q", []]);
   expect_failure Answers.Invalid (validate ["q", [false, "x"]]);
   expect_failure Answers.Invalid (parse inv);

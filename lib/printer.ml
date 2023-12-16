@@ -1,6 +1,6 @@
 open Format
 
-let letter i = Char.(chr (code 'a' + i))
+let letter i = Char.(chr (code 'A' + i))
 
 exception Invalid_question
 

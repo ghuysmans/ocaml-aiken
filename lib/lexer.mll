@@ -2,7 +2,7 @@
 open Parser
 }
 
-let choice = ['A'-'Z' 'a'-'z']
+let choice = ['A'-'Z']
 
 rule tokenize = parse
 | "ANSWER: " (choice as a) { ANSWER a }
