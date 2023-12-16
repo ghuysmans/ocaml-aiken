@@ -11,6 +11,6 @@ let expect_failure exp t =
 let () =
   expect_failure Printer.Invalid_question ["", []];
   expect_failure Printer.Invalid_question ["a. z", []];
-  expect_failure Printer.No_correct_answer ["q", []];
-  expect_failure Printer.No_correct_answer ["q", [false, "x"]];
+  expect_failure Answers.Invalid ["q", []];
+  expect_failure Answers.Invalid ["q", [false, "x"]];
   Format.printf "@.%a@." Printer.pp ["q", [true, "x"; false, "y"]]
