@@ -1,4 +1,0 @@
-q
-A. x
-C. z
-ANSWER: A

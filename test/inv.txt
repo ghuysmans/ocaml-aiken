@@ -1,4 +1,0 @@
-q
-A. x
-B. y
-ANSWER: C
